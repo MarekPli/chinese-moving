@@ -42,7 +42,7 @@ isInTable = (table, limit, x) => {
     return false
 }
 
-wyrownanie = () => {
+equateTops = () => {
     let tabIndexes = []
     // Wczytanie listy
     for (let i = 0; i < tabRectans.length; i++) {
@@ -210,7 +210,7 @@ document.addEventListener('mouseup', e => {
     pressed = false
     window.getSelection().removeAllRanges();
     if (topequal)
-        wyrownanie()
+        equateTops()
 })
 
 document.addEventListener('mousemove', e => {
@@ -236,7 +236,7 @@ modifyMixing = () => {
 modifyTopEqual = () => {
     topequal = document.querySelector(['input[id="topequal"]']).checked
     if (topequal)
-        wyrownanie()
+        equateTops()
 }
 modifyFontCommon = () => {
     commonf = document.querySelector(['input[id="commonf"]']).checked
@@ -250,14 +250,12 @@ modifyFontShadow = () => {
 }
 
 myExecute = () => {
-    let file = document.getElementById('file')
-    console.log("To jest value:", file.value)
-    console.log("To jest files:", file.files)
-    if (file.value) {
-        let fi = fi.files[0]
-        let reader = new FileReader()
-        console.log(reader)
-    }
+    // let file = document.getElementById('file')
+    // if (file.value) {
+    //     let fi = fi.files[0]
+    //     let reader = new FileReader()
+    //     console.log(reader)
+    // }
 
 }
 
