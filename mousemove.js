@@ -135,7 +135,7 @@ mixingLine = () => {
     }
 }
 
-sprawdzenie = () => {
+orderCheck = () => {
     let buf = 0
     tabRectans.forEach(el => {
         let left = parseInt(el.style.left)
