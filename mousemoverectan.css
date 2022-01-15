@@ -1,0 +1,76 @@
+.rectan div {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 4em;
+    font-family: SimSun, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    /* text-shadow: 1px 1px transparent; */
+    text-shadow: 1px 1px beige;
+    /* text-shadow: 1px 1px black; */
+    border-radius: 9px;
+    top: 200px;
+    border: 0 0 0;
+    /* border: 4px solid red; */
+    /* background-color: black; */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: blanchedalmond;
+    /* background-color: antiquewhite; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* height: 50px; */
+}
+
+.container-column {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: blanchedalmond; */
+    /* background-color: blanchedalmond; */
+    /* justify-content: space-between; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+
+}
+
+.hidden-label {
+    display: inline-block;
+    width: 50px;
+}
+
+.nextflex {
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* width: 410px; */
+}
+
+.infotext {
+    font-size: 2em;
+    margin-top: 2px;
+    margin-bottom: 12px;
+    border: 3px solid wheat;
+    border-radius: 5% / 100%;
+    border-style: inset;
+    text-align: center;
+    background-color: wheat;
+    /* background-image: linear-gradient(45deg, blanchedalmond 10%, bisque 50%, wheat 70%); */
+    /* padding-left: 0.5em; */
+    /* padding-right: 0.5em; */
+}
+
+.container div {
+    /* background-color: burlywood; */
+    /* vertical-align: middle; */
+}
+
+input {
+    /* position: absolute; */
+    /* top: 350px; */
+}

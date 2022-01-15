@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse move</title>
+    <link rel="stylesheet" href="mousemoverectan.css">
+    <script src="mousemove.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-column">
+            <div>
+
+                <input type="file" onclick="myExecute()" id='file' accept=".txt">
+                <div class="hidden-label"></div>
+                <button id="reading_file">Wczytaj plik</button>
+            </div>
+
+            <div>
+                <div class="container">
+                    <div>
+                        <label for="topequal">Wyrównanie<br>automatyczne</label>
+                        <input type="checkbox" onchange="modifyTopEqual()" id="topequal" name="topequal">
+                    </div>
+
+                    <div>
+                        <label for="mixing">Od razu<br>miesza</label>
+                        <input type="checkbox" onchange="modifyMixing()" id="mixing" name="mixing">
+                    </div>
+
+                    <div>
+                        <label for="commonf">Czcionka<br>zwykła</label>
+                        <input type="checkbox" onchange="modifyFontCommon()" id="commonf" name="commonf">
+                    </div>
+                    <div>
+                        <label for="blackshadow">Czarny<br>cień</label>
+                        <input type="checkbox" onchange="modifyFontShadow()" id="blackshadow" name="blackshadow">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button onclick="printCharacters()">Wybór linii</button>
+                <button onclick='mixingLine()'>Mieszanie</button>
+                <button onclick='wyrownanie()'>Wyrównaj<br>aktualne</button>
+                <button onclick='sprawdzenie()'>Sprawdzenie </button>
+            </div>
+        </div>
+        <div class='container-column'>
+            <p class='infotext'>Przesuwaj znaki przywracając kolejność</p>
+            <div class="lines"></div>
+            <div>
+                <div>
+                    <input type="radio" id="losowo" name="drone" value="losowo" checked>
+                    <label for="losowo">Losowo</label>
+                    <input type="radio" id="previous" name="drone" value="previous">
+                    <label for="previous">Poprzednie</label>
+                    <input type="radio" id="next" name="drone" value="next">
+                    <label for="next">Następne</label>
+                    <input type="radio" id="range" name="drone" value="range">
+                    <label for="range">W zakresie od 1 do ...</label>
+                    <input onchange="modifyRange()" type="range" id="dronerange" name="dronerange" min="1" max="125"
+                        value="90" step="1">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rectan"></div>
+</body>
+
+</html>
