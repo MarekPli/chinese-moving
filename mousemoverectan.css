@@ -59,6 +59,7 @@
     border-radius: 5% / 100%;
     border-style: inset;
     text-align: center;
+    /* background-color: red; */
     background-color: wheat;
     /* background-image: linear-gradient(45deg, blanchedalmond 10%, bisque 50%, wheat 70%); */
     /* padding-left: 0.5em; */
@@ -84,6 +85,17 @@ input[type="checkbox"]:hover {
     box-shadow: 2px 2px darkkhaki;
     background-color: darkkhaki;
 }
+
+label {
+    color: #666;
+}
+
+label:hover {
+    color: black;
+    text-shadow: 0px 0px 8px silver;
+    /* color:peru; */
+}
+
 
 .container div {
     /* background-color: burlywood; */
