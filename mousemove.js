@@ -266,9 +266,9 @@ myExecute = () => {
     // }
 }
 hoverOn = (e) => {
-    if (!checkedOrdered)
-        e.target.style.boxShadow = '4px 4px gray'
+    e.target.style.boxShadow = '4px 4px gray'
 }
+
 hoverOff = (e) => {
     if (checkedOrdered)
         e.target.style.boxShadow = "0 0"

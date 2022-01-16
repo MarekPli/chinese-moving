@@ -76,14 +76,16 @@ button:hover {
     box-shadow: 4px 4px gray;
 }
 
+button:active {
+    box-shadow: 0px 0px gray;
+}
+
+input[type="checkbox"]:hover {
+    box-shadow: 2px 2px darkkhaki;
+    background-color: darkkhaki;
+}
+
 .container div {
     /* background-color: burlywood; */
     /* vertical-align: middle; */
-}
-
-input {
-    /* border: 1px solid; */
-    /* box-shadow: 3px 3px silver; */
-    /* position: absolute; */
-    /* top: 350px; */
 }
