@@ -65,12 +65,21 @@
     /* padding-right: 0.5em; */
 }
 
+button {
+    /* border: 1px solid silver; */
+    border: 1px solid;
+    /* border-style: inset; */
+    box-shadow: 3px 3px silver;
+}
+
 .container div {
     /* background-color: burlywood; */
     /* vertical-align: middle; */
 }
 
 input {
+    /* border: 1px solid; */
+    /* box-shadow: 3px 3px silver; */
     /* position: absolute; */
     /* top: 350px; */
 }

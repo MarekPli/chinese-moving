@@ -5,6 +5,7 @@ let spacePosX = 100
 let cssTop = '200px'
 let xPos = spacePosX
 let fileText = ''
+let checkedOrdered = false
 let rectan = document.getElementsByClassName('rectan')[0]
 let lines = document.getElementsByClassName('lines')[0]
 let commonf = document.querySelector(['input[id="commonf"]']).checked
@@ -135,11 +136,15 @@ mixingLine = () => {
     }
 }
 
-orderCheck = () => {
+orderCheck = (e) => {
     let buf = 0
+    if (checkedOrdered)
+        e.target.style.boxShadow = "3px 3px silver"
+    else
+        e.target.style.boxShadow = "0 0"
     tabRectans.forEach(el => {
         let left = parseInt(el.style.left)
-        if (left < buf) {
+        if (left < buf && !checkedOrdered) {
             el.style.borderWidth = "6px"
             el.style.borderStyle = "solid"
             el.style.borderColor = "red"
@@ -148,6 +153,7 @@ orderCheck = () => {
             buf = left
         }
     })
+    checkedOrdered = !checkedOrdered
 }
 
 clearBorder = el => {
@@ -233,10 +239,10 @@ modifyMixing = () => {
     mixing = document.querySelector(['input[id="mixing"]']).checked
 }
 
-modifyTopEqual = () => {
+modifyTopEqual = (e) => {
     topequal = document.querySelector(['input[id="topequal"]']).checked
-    if (topequal)
-        equateTops()
+    // if (topequal)
+    //     equateTops()
 }
 modifyFontCommon = () => {
     commonf = document.querySelector(['input[id="commonf"]']).checked
