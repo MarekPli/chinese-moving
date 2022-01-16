@@ -140,6 +140,8 @@ orderCheck = (e) => {
     let buf = 0
     if (checkedOrdered)
         e.target.style.boxShadow = "3px 3px silver"
+    // e.target.style.boxShadow:hov = "3px 3px silver"
+    // box - shadow: 4 px 4 px gray;
     else
         e.target.style.boxShadow = "0 0"
     tabRectans.forEach(el => {
@@ -262,8 +264,16 @@ myExecute = () => {
     //     let reader = new FileReader()
     //     console.log(reader)
     // }
-
 }
-
+hoverOn = (e) => {
+    if (!checkedOrdered)
+        e.target.style.boxShadow = '4px 4px gray'
+}
+hoverOff = (e) => {
+    if (checkedOrdered)
+        e.target.style.boxShadow = "0 0"
+    else
+        e.target.style.boxShadow = '3px 3px silver'
+}
 for (i = 0; i < 8; i++)
     addToTable()

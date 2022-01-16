@@ -72,6 +72,10 @@ button {
     box-shadow: 3px 3px silver;
 }
 
+button:hover {
+    box-shadow: 4px 4px gray;
+}
+
 .container div {
     /* background-color: burlywood; */
     /* vertical-align: middle; */
