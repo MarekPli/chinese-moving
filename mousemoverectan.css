@@ -97,7 +97,8 @@ label:hover {
 }
 
 
-.container div {
+.container button {
+    height: 2.5em;
     /* background-color: burlywood; */
     /* vertical-align: middle; */
 }
