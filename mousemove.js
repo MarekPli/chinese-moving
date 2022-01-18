@@ -12,7 +12,7 @@ let commonf = document.querySelector(['input[id="commonf"]']).checked
 let blackshadow = document.querySelector(['input[id="blackshadow"]']).checked
 let topequal = document.querySelector(['input[id="topequal"]']).checked
 let mixing = document.querySelector(['input[id="mixing"]']).checked
-let currentLine = 90
+let currentLine = document.querySelector(['input[name="dronerange"]']).value
 lines.innerHTML = 'Wybierz linię tekstu'
 
 
@@ -97,18 +97,17 @@ chooseLine = () => {
             currentLine = Math.floor(Math.random() * m)
             break
     }
-    return currentLine
 }
 
 printCharacters = () => {
-    let line = chooseLine()
     // line = Math.floor(Math.random() * 125)
     // let plus = 10 * line
+    chooseLine()
     let modulus = 9
     if (fileText.length == 1250)
         modulus = 10;
 
-    let plus = modulus * line
+    let plus = modulus * currentLine
     xPos = spacePosX
     for (let i = plus; i < tabRectans.length + plus; i++) {
         let j = i - plus
@@ -119,7 +118,7 @@ printCharacters = () => {
         tabRectans[j].id = 'id' + xPos
         tabRectans[j].style.left = addxPos(j)
     }
-    line = (line + 1) * 2 - 1
+    let line = (currentLine + 1) * 2 - 1
     lines.innerHTML = "Wypisano linie: " + line + ' oraz ' + (line + 1) + '.'
     if (mixing)
         mixingLine()
