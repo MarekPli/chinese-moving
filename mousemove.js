@@ -114,11 +114,7 @@ printCharacters = () => {
         let j = i - plus
         if (fileText) // może być undefined przed wczytaniem pliku
             tabRectans[j].innerHTML = fileText[i]
-        // setFontFamily(tabRectans[j])
         randomColor(tabRectans[j])
-        // let colors = randomColor()
-        // tabRectans[j].style.backgroundColor = colors[0]
-        // tabRectans[j].color = colors[1]
         tabRectans[j].style.top = cssTop
         tabRectans[j].id = 'id' + xPos
         tabRectans[j].style.left = addxPos(j)
@@ -198,9 +194,15 @@ randomColor = (elem) => {
     for (let i = 0; i < 3; i++)
         tabColor.push(Math.floor(Math.random() * 255))
     let s1 = "rgb(" + tabColor[0] + "," + tabColor[1] + "," + tabColor[2] + ")";
+    // for (let i = 0; i < 3; i++)
+    // tabColor.forEach((_, idx, tabColor) => {
+    //     tabColor[idx] = Math.floor(Math.random() * 255)
+    // });
+    // let s2 = "rgb(" + tabColor[0] + "," + tabColor[1] + "," + tabColor[2] + ")";
     let s2 = "rgb(" + colorComplement(tabColor[0]) + "," + colorComplement(tabColor[1]) + "," + colorComplement(tabColor[2]) + ")";
     elem.style.backgroundColor = s1
     elem.style.color = s2
+    // elem.style.textShadow = '1px 1px ' + "rgb(" + colorComplement(tabColor[0]) + "," + colorComplement(tabColor[1]) + "," + colorComplement(tabColor[2]) + ")";
 }
 
 addToTable = () => {

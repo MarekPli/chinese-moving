@@ -7,6 +7,7 @@
     font-size: 4em;
     font-family: SimSun, 'Times New Roman', Times, serif;
     cursor: pointer;
+    /* box-sizing: border-box; */
     /* text-shadow: 1px 1px transparent; */
     text-shadow: 1px 1px beige;
     /* text-shadow: 1px 1px black; */
@@ -97,7 +98,7 @@ label:hover {
 }
 
 
-.container button {
+.container .bigBtn button {
     height: 2.5em;
     /* background-color: burlywood; */
     /* vertical-align: middle; */
