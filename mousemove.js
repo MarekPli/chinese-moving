@@ -210,10 +210,13 @@ addToTable = () => {
     elem.style.left = xPos + 'px'
     elem.id = 'id' + xPos
     xPos += spacePosX
-    elem.addEventListener('mousedown', e => pressed = e.target.id)
-    elem.addEventListener('contextmenu', e => {
-        e.preventDefault()
-        randomColor(e.target)
+    elem.addEventListener('contextmenu', e => e.preventDefault())
+    elem.addEventListener('mousedown', e => {
+        if (e.button == 0) {
+            pressed = e.target.id
+        } else if (e.button == 2) { // 'contextmenu'
+            randomColor(e.target)
+        }
     })
     keysRectans[elem.id] = elem
     tabRectans.push(elem)
