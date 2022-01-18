@@ -23,7 +23,7 @@ document.querySelector('#reading_file').addEventListener('click', function (e) {
     reader.readAsText(file)
     reader.onload = () => {
         fileText = reader.result
-        printCharacters()
+        printCharacters(false)
     }
     // e.target.innerHTML = "Plik wczytany"
     // e.target.disabled = true
@@ -99,10 +99,11 @@ chooseLine = () => {
     }
 }
 
-printCharacters = () => {
+printCharacters = (random = true) => {
     // line = Math.floor(Math.random() * 125)
     // let plus = 10 * line
-    chooseLine()
+    if (random)
+        chooseLine()
     let modulus = 9
     if (fileText.length == 1250)
         modulus = 10;
@@ -113,11 +114,15 @@ printCharacters = () => {
         let j = i - plus
         if (fileText) // może być undefined przed wczytaniem pliku
             tabRectans[j].innerHTML = fileText[i]
+        if (!random)
+            continue
         randomColor(tabRectans[j])
         tabRectans[j].style.top = cssTop
         tabRectans[j].id = 'id' + xPos
         tabRectans[j].style.left = addxPos(j)
     }
+    if (!random)
+        return
     let line = (currentLine + 1) * 2 - 1
     lines.innerHTML = "Wypisano linie: " + line + ' oraz ' + (line + 1) + '.'
     if (mixing)
