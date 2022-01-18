@@ -115,9 +115,10 @@ printCharacters = () => {
         if (fileText) // może być undefined przed wczytaniem pliku
             tabRectans[j].innerHTML = fileText[i]
         // setFontFamily(tabRectans[j])
-        let colors = randomColor()
-        tabRectans[j].style.backgroundColor = colors[0]
-        tabRectans[j].color = colors[1]
+        randomColor(tabRectans[j])
+        // let colors = randomColor()
+        // tabRectans[j].style.backgroundColor = colors[0]
+        // tabRectans[j].color = colors[1]
         tabRectans[j].style.top = cssTop
         tabRectans[j].id = 'id' + xPos
         tabRectans[j].style.left = addxPos(j)
@@ -192,28 +193,28 @@ colorComplement = n => {
     return (n + 128) % 255
 }
 
-randomColor = () => {
+randomColor = (elem) => {
     let tabColor = []
     for (let i = 0; i < 3; i++)
         tabColor.push(Math.floor(Math.random() * 255))
-    let returnTab = []
     let s1 = "rgb(" + tabColor[0] + "," + tabColor[1] + "," + tabColor[2] + ")";
     let s2 = "rgb(" + colorComplement(tabColor[0]) + "," + colorComplement(tabColor[1]) + "," + colorComplement(tabColor[2]) + ")";
-    returnTab.push(s1)
-    returnTab.push(s2)
-    return returnTab
+    elem.style.backgroundColor = s1
+    elem.style.color = s2
 }
 
 addToTable = () => {
     elem = document.createElement('div')
     rectan.appendChild(elem)
-    let colors = randomColor()
-    elem.style.backgroundColor = colors[0]
-    elem.style.color = colors[1]
+    randomColor(elem)
     elem.style.left = xPos + 'px'
     elem.id = 'id' + xPos
     xPos += spacePosX
     elem.addEventListener('mousedown', e => pressed = e.target.id)
+    elem.addEventListener('contextmenu', e => {
+        e.preventDefault()
+        randomColor(e.target)
+    })
     keysRectans[elem.id] = elem
     tabRectans.push(elem)
     if (tabRectans.length == 4)
