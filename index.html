@@ -52,8 +52,18 @@
             </div>
         </div>
         <div class='container-column'>
-            <p class='infotext'>Przesuwaj znaki przywracając kolejność</p>
-            <div class="lines"></div>
+            <div>
+                <p class='infotext'>Przesuwaj znaki przywracając kolejność</p>
+            </div>
+            <div>
+                <input type="radio" onchange="chooseCharfile()" id="trad" name='character' value="trad" checked>
+                <label for="trad">Znaki tradycyjne</label>
+                <input type="radio" onchange="chooseCharfile()" id="simpleid" name='character' value="simple">
+                <label for="simpleid">Znaki uproszczone</label>
+                <input type="radio" onchange="chooseCharfile()" id="charfile" name='character' value="charfile">
+                <label for="charfile">Znaki z pliku</label>
+                <div class="lines"></div>
+            </div>
             <div>
                 <div>
                     <input type="radio" id="losowo" name="drone" value="losowo" checked>

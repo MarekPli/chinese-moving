@@ -4,6 +4,7 @@ let tabRectans = []
 let spacePosX = 100
 let cssTop = '200px'
 let xPos = spacePosX
+let printText = ''
 let fileText = ''
 let checkedOrdered = false
 let rectan = document.getElementsByClassName('rectan')[0]
@@ -22,7 +23,7 @@ document.querySelector('#reading_file').addEventListener('click', function (e) {
     let reader = new FileReader()
     reader.readAsText(file)
     reader.onload = () => {
-        fileText = reader.result
+        fileText = printText = reader.result
         printCharacters(false)
     }
     // e.target.innerHTML = "Plik wczytany"
@@ -30,6 +31,7 @@ document.querySelector('#reading_file').addEventListener('click', function (e) {
 })
 
 addxPos = (i) => {
+    // reformat and ++ for next
     let r = xPos + 'px'
     xPos += spacePosX
     if (i == 3)
@@ -99,21 +101,38 @@ chooseLine = () => {
     }
 }
 
+chooseCharfile = () => {
+    let charType = document.querySelector(['input[name="character"]:checked']).value
+    switch (charType) {
+        case "trad":
+            printText = traditStr
+            break
+        case "simple":
+            printText = simpleStr
+            break
+        case "charfile":
+            printText = fileText
+            break
+    }
+    // if printText empty, no results, previous remains
+    printCharacters(false)
+}
+
 printCharacters = (random = true) => {
     // line = Math.floor(Math.random() * 125)
     // let plus = 10 * line
     if (random)
         chooseLine()
     let modulus = 9
-    if (fileText.length == 1250)
+    if (printText.length == 1250)
         modulus = 10;
 
     let plus = modulus * currentLine
     xPos = spacePosX
     for (let i = plus; i < tabRectans.length + plus; i++) {
         let j = i - plus
-        if (fileText) // może być undefined przed wczytaniem pliku
-            tabRectans[j].innerHTML = fileText[i]
+        if (printText) // może być undefined przed wczytaniem pliku
+            tabRectans[j].innerHTML = printText[i]
         if (!random)
             continue
         randomColor(tabRectans[j])
@@ -297,5 +316,5 @@ for (i = 0; i < 8; i++)
 
 modifyRange()
 document.querySelector('#losowo').checked = true
-fileText = tradit
+printText = traditStr
 printCharacters()
