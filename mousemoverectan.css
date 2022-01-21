@@ -111,6 +111,24 @@ label:hover {
     /* vertical-align: middle; */
 }
 
+.pinyin {
+    color: rebeccapurple;
+    font: 1.5rem Times !important;
+    /* font: 1.5rem Times; */
+    padding-top: 30px;
+    /* visibility: hidden; */
+    visibility: visible;
+}
+
+.translate {
+    color: slateblue;
+    font: 1rem Times !important;
+    /* font: 1.5rem Times; */
+    padding-top: 80px;
+    /* visibility: hidden; */
+    visibility: visible;
+}
+
 .boxdown {
     position: absolute;
     display: flex;

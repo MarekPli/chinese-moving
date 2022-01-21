@@ -125,8 +125,8 @@ const traditStr = `天地玄黃宇宙洪荒
 謂語助者焉哉乎也
 `
 
-const simpleStr = 
-`天地玄黄宇宙洪荒
+const simpleStr =
+    `天地玄黄宇宙洪荒
 日月盈昃辰宿列张
 寒来暑往秋收冬藏
 闰余成岁律吕调阳
@@ -251,4 +251,258 @@ const simpleStr =
 束带矜庄徘徊瞻眺
 孤陋寡闻愚蒙等诮
 谓语助者焉哉乎也
+`
+
+const pinyinStr = `tiān dì xuán huáng yǔ zhòu hóng huāng
+rì yuè yíng zè chén sù liè zhāng
+hán lái shǔ wǎng qiū shōu dōng cáng
+rùn yú chéng suì lǜ lǚ tiáo yáng
+yún téng zhì yǔ lù jié wéi shuāng
+jīn shēng lì shuǐ yù chū kūn gāng
+jiàn hào jù quē zhū chēng yè guāng
+guǒ zhēn lǐ nài cài zhòng jiè jiāng
+hǎi xián hé dàn lín qián yǔ xiáng
+lóng shī huǒ dì niǎo guān rén huáng
+shǐ zhì wén zì nǎi fú yī cháng
+tuī wèi ràng guó yǒu yú táo táng
+diào mín fá zuì zhōu fā yīn tāng
+zuò cháo wèn dào chuí gǒng píng zhāng
+ài yù lí shǒu chén fú róng qiāng
+xiá ěr yī tǐ shuài bīn guī wáng
+míng fèng zài zhú bái jū shí cháng
+huà bèi cǎo mù lài jí wàn fāng
+gài cǐ shēn fà sì dà wǔ cháng
+gōng wéi jū yǎng qǐ gǎn huǐ shāng
+nǚ mù zhēn jié nán xiào cái liáng
+zhī guò bì gǎi dé néng mò wàng
+wǎng tán bǐ duǎn mí shì jǐ cháng
+xìn shǐ kě fù qì yù nán liàng
+mò bēi sī rǎn shī zàn gāo yáng
+jǐng xíng wéi xián kè niàn zuò shèng
+dé jiàn míng lì xíng duān biǎo zhèng
+kōng gǔ chuán shēng xū táng xí tīng
+huò yīn è jī fú yuán shàn qìng
+chǐ bì fēi bǎo cùn yīn shì jìng
+zī fù shì jūn yuē yán yǔ jìng
+xiào dāng jié lì zhōng zé jìn mìng
+lín shēn lǚ bó sù xīng wēn qìng
+sì lán sī xīn rú sōng zhī shèng
+chuān liú bù xī yuān chéng qǔ yìng
+róng zhǐ ruò sī yán cí ān dìng
+dǔ chū chéng měi shèn zhōng yí lìng
+róng yè suǒ jī jí shèn wú jìng
+xué yōu dēng shì shè zhí cóng zhèng
+cún yǐ gān táng qù ér yì yǒng
+yuè shū guì jiàn lǐ bié zūn bēi
+shàng hé xià mù fū chàng fù suí
+wài shòu fù xùn rù fèng mǔ yí
+zhū gū bó shū yóu zǐ bǐ ér
+kǒng huái xiōng dì tóng qì lián zhī
+jiāo yǒu tóu fèn qiè mó zhēn guī
+rén cí yǐn cè zào cì fú lí
+jié yì lián tuì diān pèi fěi kuī
+xìng jìng qíng yì xīn dòng shén pí
+shǒu zhēn zhì mǎn zhú wù yì yí
+jiān chí yǎ cāo hǎo jué zì mí
+dū yì huà xià dōng xī èr jīng
+bèi máng miàn luò fú wèi jù jīng
+gōng diàn pán yù lóu guān fēi jīng
+tú xiě qín shòu huà cǎi xiān líng
+bǐng shè bàng qǐ jiǎ zhàng duì yíng
+sì yán shè xí gǔ sè chuī shēng
+shēng jiē nà bì biàn zhuàn yí xīng
+yòu tōng guǎng nèi zuǒ dá chéng míng
+jì jí fén diǎn yì jù qún yīng
+dù gǎo zhōng lì qī shū bì jīng
+fǔ luó jiàng xiàng lù xiá huái qīng
+hù fēng bā xiàn jiā jǐ qiān bīng
+gāo guān péi niǎn qū gǔ zhèn yīng
+shì lù chǐ fù chē jià féi qīng
+cè gōng mào shí lè bēi kè míng
+pán xī yī yǐn zuǒ shí ā héng
+yǎn zhái qū fù wēi dàn shú yíng
+huán gōng kuāng hé jì ruò fú qīng
+qǐ huí hàn huì yuě gǎn wǔ dīng
+jùn yì mì wù duō shì shí níng
+jìn chǔ gēng bà zhào wèi kùn hèng 
+jiǎ tú miè guó jiàn tǔ huì méng
+hé zūn yuē fǎ hán bì fán xíng
+qǐ jiǎn pō mù yòng jūn zuì jīng
+xuān wēi shā mò chí yù dān qīng
+jiǔ zhōu yǔ jì bǎi jùn qín bìng
+yuè zōng tài dài chàn zhǔ yún tíng
+yàn mén zǐ sài jī tián chì chéng
+kūn chí jié shí jù yě dòng tíng
+kuàng yuǎn mián miǎo yán xiù yǎo míng
+zhì běn yú nóng wù zī jià sè
+chù zǎi nán mǔ wǒ yì shǔ jì
+shuì shú gòng xīn quàn shǎng chù zhì
+mèng kē dūn sù  shǐ yú bǐng zhí
+shù jī zhōng yōng láo qiān jǐn chì
+líng yīn chá lǐ  jiàn mào biàn sè
+yí jué jiā yóu miǎn qí zhī zhí
+xǐng gōng jī jiè chǒng zēng kàng jí
+dài rǔ jìn chǐ lín gāo xìng jí
+liǎng shū jiàn jī jiě zǔ shéi bī
+suǒ jū xián chù chén mò jì liáo
+qiú gǔ xún lùn sàn lǜ xiāo yáo
+xīn zòu lèi qiǎn qī xiè huān zhāo
+qú hé de lì yuán mǎng chōu tiáo
+pí pá wǎn cuì wú tóng zǎo diāo
+chén gēn wěi yì luò yè piāo yáo
+yóu kūn dú yùn líng mó jiàng xiāo
+dān dú wán shì yù mù náng xiāng
+yì yóu yōu wèi zhǔ ěr yuán qiáng
+jù shàn cān fàn shì kǒu chōng cháng
+bǎo yù pēng zǎi jī yàn zāo kāng
+qīn qī gù jiù lǎo shào yì liáng
+qiè yù jì fǎng shì jīn wéi fáng
+wán shàn yuán xié yín zhú wěi huáng
+zhòu mián xī mèi lán sǔn xiàng chuáng
+xián gē jiǔ yàn jiē bēi jǔ shāng
+jiǎo shǒu dùn zú yuè yù qiě kāng
+dí hòu sì xù jì sì zhēng cháng
+qǐ sǎng zài bài sǒng jù kǒng huáng
+jiān dié jiǎn yào gù dá shěn xiáng
+hái gòu xiǎng yù zhí rè yuàn liáng
+lǖ luó dú tè hài yuè chāo xiāng
+zhū zhǎn zéi dào bǔ huò pàn wáng
+bù shè liáo wán jī qín ruǎn xiào
+tián bǐ lún zhǐ  jūn qiǎo rén diào
+shì fēn lì sú bìng jiē jiā miào
+máo shī shū zī gōng pín yán xiào
+nián shǐ měi cuī xī huī lǎng yào
+xuán jī xuán wò huì pò huán zhào
+zhǐ xīn xiū hù yǒng suí jí shào
+jǔ bù yǐn lǐng fǔ yǎng láng miào
+shù dài jīn zhuāng pái huái zhān tiào
+gū lòu guǎ wén yú méng děng qiào
+wèi yǔ zhù zhě yān zāi hū yě
+`
+
+const translateStr = `Heavens|Earth|At the beginning|Barren|Uniwerse|World|Vast|Desert
+Sun|Moon|Waxing|Setting|Stars|Constellations|Line-up|Spread
+Winter|Comes|Summer|Goes|Autumn|Reap|Winter|Store
+Intercalary month|Extra|Make up|Year|Sound tuner||Regulate or harmonise|Yang (and yin)
+Clouds|Rise|Cause|Rain|Dew|Form|Become|Frost
+Gold|Produced in|River Li|Water (river)|Jade|Produced in|Kunlun mountains|
+Sword|Named|Juque||Pearl|Named|Night|Brillance
+Fruit|Precious|Peaches, plums or apples||Vegetables|Important|Mustart greens|Ginger
+Seas and oceans|Salty|Rivers|Plain|Scales|Submerge|Feathers|Fly
+Dragon|Teacher|Fire|King|Birds (and animals)|Officials|Men|Emperor
+Beginning|Created|Chinese characters||Continue|Wear|Upper body attire|Lower body attire
+Reject|Official position|Give up|Country|There is|Yu (Shun)|Tao|Tang (Yao)
+Comfort|People|Attack|Tyrant|Zhou Fa||Yin Tang|
+Sit|Imperial court|Ask|Ways|Drop|Clasping hands|Just|Upright
+Love|Bring up|Black (hair)|Head (means people)|Subject|Obey|Barbarian|Qiang tribe
+Far|Near|One|Body|Lead|Guests|Return to|King
+Chirping|Phoenix|At|Bamboo|White|Steed|Eat|Place
+Changed|Touched|Grass|Tree|Depends|On time|Ten thousand|Direction
+Cover|This|Body|Hair|Four|Great|Five|Normal
+Respect|With|Bow|Feed and nurture|Should not|Dare|Destroy|That
+Lady|Respect|Purity|Virtue|Man|Imitate|Abillity|Wisdom
+Know|Wrongdoing|Must|Respect|Receive|Able|Do not|Forget
+Do not|Gossip|Each other|Shortcoming|Do nto|Insist|Self|Good
+Trustworthiness|||Tested| Talents or vessels|Desires|Difficult|Measure
+Mo Zi|Grief|Silk|Discoloured|Poetry|Praise|Young|Lamb
+Look up to|Trace|Onlly|Virtuous|Overcome|Thoughts|Act as|Saint
+Virtue|Build|Reputation|Establish|Shape|Posture|Expression|Upright
+Empty|Valley|Reverberate|Sound|Empty|Hall|Reverberate|Hearing
+Calamity|Because|Evil|Accumulate|Fortune|Result of|Kindness|Reward (in this context)
+Foot (measurement)|Jade|Not|Precious jewel|Inch|Time|Is|Fitght
+Give gifts|Father|Service|King|Speak|Solemnt|Given|Respect
+Filial piety|Ought to|Much|Effort|Loyal|Rule|Complete|Life
+Reach|Deep|Steps|Thin ice layer|Morning|Rise early|Warm|Cool
+Like|Orchid|This|Fragrance|Like|Pine tree|Of|Fluorish
+River|Flow|No|Stop|Source (beginning)|Clear|Get|Reflection
+Appearance|Actions|Like|Thought|Words|Diction|Calm|Sure
+Sincere|Beginning|Honest|Kind|Careful|End|Ought to|Law
+Fluorishing|Business|Thus|Foundation|Reference|Until|No|Limit
+Learn|Excellent|Promoted|Official position|Take up|Post|Participate|Politics
+Keep|As if|Gang tang tree||Gone|But|Good|Remembered
+Music|Distinguish|Rich|Poor|Etiquette|Distinguish|Higher class|Lower class
+Top|In harmony|Bottom|Agreeable|Husband|Sings|Wife|Follows
+Outside|Receive|Master|Teachings|Home|Sustain|Mother (and father)|Ceremony
+Every|Aunt|Elder uncle|Younger uncle|Same as brother’s son||Compare with own son|
+Very|Love|Elder brother|Younger brother|Same|Breath|Link|Branches
+Contact|Friend|Rely on|Friendship|Act|Polish|Advice|Manners
+Compassion|Kindness|Hidden|Sadness|Hasty|Not|Principle|Depart
+Moral integrity|Loyalty|Modesty|Forgiveness|Stop|Imperfection|Contradiction|Confusion
+Nature|Quiet|Feeling|Calm|Mind|Move|Spirit|Tired
+Integrity|Truth|Ambition|Contentment|Chase|Material things|Wish|More
+Maintain|Hold ont|Charm, elegance|Virtue|Good|Reward; high position|Self|Obtain, own
+Capital|Country, city, capital|Civilised|Large|East|West|Two|Capital
+Back|Mang mountains (Henan)|Face|Luo river|Float|Wei river|According to|Source of Jing river
+Palace|Hall|Encircled|Flourishing|Tower|Look up|Flying|Fright
+Draw|Write|Birds|Animals|Draw|Colour|Immortals|Gods
+A heavenly stem|House|Side|Open|First|Bed-curtain; tent|Opposite|Pillar
+Set up|Double seat|Establish|Single seat|Play|Stringed instrument|Play|Reed pipe
+Ascend|Stairs|Enter|Stairs in place|Hats|Move about|Resemble|Stars
+Right|Connect through|Name of palace||Left|Reach|Name of palace|
+Here|Collect|Articles|Classics|Also|Collect|Large crowd|Heroes
+Du Du|Calligraphy|Zhong You|Writings|Paint|Book|Wall|Classic
+Office, mansion|Gather|Generals|Ministers|Road|Heroes|Huai tree|Ministry
+House|Honour bestowed by the emperor|a| Counties|High official’s house|provide with|Thousand|Soldiers
+High|Hat|Accompany|Imperial carriage|Ride|Centre of the wheel|Shake|Tassel
+Generations|Luck, wealth|Wasteful|Rich|Carriages|Ride|Stout horse|Light carriage
+Plans|Merits|Abundant|Real|Instantly|Stelae|Carve|Inscription
+River Pan||Yi Yin, minister of Shang Dynasty||Help|Time|A Heng, alias of Yi Yin|
+Name of ancient place|Residence|Qufu province||Without|Refers to Duke of Zhou|How would|Tent
+Huan Gong (Duke Huan)||Unified|meet|Help|Weak|Assist|Those in danger
+Qi|Return|Han emperor Huidi|Gratitude|Rumour|Impression|Wu Ding, a king of Shang|
+Wise men|Honest, diligent|Outstanding|Encourage|Many|Scholars|Make real|Peace
+Jin|Chu kingdoms|Replace|Hegemony|Zhao|Wei|Surrounded|Lian Heng
+Via|By way of|Conquer|State of Guo|Jiantu||Meet|Treaty to form alliance
+He|Obey|Agreement|Punishment|Han Fei|Stranded|Harsh|Punishment
+Bai Qi|Wang Jian|Lian Po|Li Mu|Use|Troops|Most|Clever and able
+Announce|Power|Sand|Desert|Spread|Honour and reputation|Red|Green
+Nine|Provinces|Da Yu|Trace|Hundred|Prefecture|Qin|Unify
+Tall mountains|Respect|Mount Tai|Mountain|Chan (Meditation)|Monk|Pavilion|
+Yanmen (an important pass)||Purple Gateway (Great Wall)||Jitian||Chicheng|
+Kunming Lake||Jieshi Mountain||Juye lake||Dongting lake|
+Vast and spacious|Distant|Appearing distant and vague||Rocks|Cave|Distant|Obscure
+Control|Origin|By|Farmers|Affairs|Of|Planting|Harvesting
+Beginning|Engage in|Field, farmland||I|Plant; cultivate|Grains|
+Tax|Ripe|Offer|Newly-harvested crops|Encourage|Reward|Demoted and punished|
+Meng Ke||Honest|Simple|Shi Yu||Honest|Upright
+To get near; attain||Balanced; moderate||Hard work|Humility|Meticulousness|Honesty
+Listen|Sound|Study|Reason|Observe|Face|Differentiate|Colour
+Pass on|Others|Good|Plans|Encourage|Others|With care and respect|Plants (roots)
+Watch|Bow|Mock|Satisfaction|Spoilt by success|Increase|Resist|Extreme
+Danger|Disgrace|Near|Shame|Forest|Riverbank|Lucky|Immediately
+Two|Shu|See|Opportunity|Give up an official post||Who|Force
+Alone|House|Free|Place|Quiet|Silence|Lonely|Empty
+Search|Ancient|Seek|Intellectual discourse|Scatter|Anxiety|Far|Carefree
+Happiness|To gather; together|Tired|Expel|Sorrow|Decline|Happiness|Beckon
+Lake|Lotus|Shining brightly||Garden|Full of grass|Pull|Weed
+Loquat||Late|Green|Wu tong||Early|Wither
+Old|Roots|Wither|Death|Falling|Leaves|drift; blow|
+Wandering kun (large, stork-like bird)||Alone|Move|Fly|Purplished red|Fall|The misty regions of heaven
+Indulge in|Studies|Frivolous|Marketplace|Satisfy|Eye|Case|Box
+Easy; taken lightly||Smooth|Afraid|Ears; to have heard||Walls|
+Provide|Meals|Food|Rice|Suits|()Flavour|Satisfy|Intestine
+Satisfy|Hunger|Cook|Slaughter|Hungry|Dislike|Husk of rice grain|
+Relatives and friends||Old acquaintances||Old|Young|Differ|Food
+Concubine|Subordinate|Weave|Spin|Serve|Towel|A couple’s inner chamber|
+Silk|Fan|Complete|Clean|Silver|Candle|Bright|Brillant
+Day|Sleep|Evening|Sleep|Green (in this context)|Bamboo|Ivory|Bed
+String instrument|Song|Wine|Dinner party|Receive|Cup|Lift up|Wine vessel
+Hold|Hand|Stamp one’s foot||Happy|Glad|Also|Healthy
+Children borne by the first wife||Descendant|Continue|Offering|Pay respect|Sacrifices offered in winter and autumn|
+Prostrate|Forehead|Again|Pay homage|Reverence|Afraid|Scared|Surprised
+Paper|Publications; documents|Brief|Concise|Thing back|Answer|Question|Detail
+Dried bones|Dirty|Think|Wash|Result of|Hot|Wish|Cold
+Donkey|Mule|Calf|Comestic animals|Surprised and frightened|Jump|Extraordinary|High
+Punish|Kill|Thief|Robber|Arrest|Obtain|Rebel|Death
+Lü Bu|Shoot|Xiong Yiliao (name of a person)|Ball|Ji Kang|Chinese string instrument|Ruan Ji|Whistle
+Meng Tian|Brush|Cai Lun|Paper|Ma Jun|Skilful|Ren (surname of a person)|Fishing hook
+Let go|Confusion (or numerous)|Benefit|Culture|Moving together|Are|Good; charming|Beautiful
+Mao Qiang|Xi Shi|Virtuous beauty|Glamorous|Skilful|Frown|Beautiful|Smile
+Year|Arrow|Everyone|Hasten|Early morning|Sunlight|High up|Shines brightly
+North Star||High up|Rotate; revolve (resulting in change)|Last day of the lunar month|Moonlight|Encircle|Shines
+Sign|Fireword|Repair|Blessings|Forever|Safe; peaceful;|Luck|Encouragement
+Discipline|Steps|Look afar||Bow head|Look up|Corridor|Temple
+Tighten|Belt|Feel proper||To pace up and down||Look up|Look afar
+Alone|Ugly|Little|Knowledge|Stupidity||Of the same grade|Mock
+Call|Language|Help|(person; here has no meaning)|Yan|Zai|Bu|Ye
 `

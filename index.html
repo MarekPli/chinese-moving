@@ -41,6 +41,14 @@
                         <label for="blackshadow">Czarny<br>cień</label>
                         <input type="checkbox" onchange="modifyFontShadow()" id="blackshadow" name="blackshadow">
                     </div>
+                    <div>
+                        <label for="pinyinId">Wymowa<br>pinyin</label>
+                        <input type="checkbox" onchange="modifyPinyin()" id="pinyinId" name="pinyin">
+                    </div>
+                    <div>
+                        <label for="translateId">Przekład<br>wyrazu</label>
+                        <input type="checkbox" onchange="modifyTranslate()" id="translateId" name="translate">
+                    </div>
                 </div>
             </div>
             <div class="container bigBtn">
@@ -85,6 +93,7 @@
 
     <div class="rectan"></div>
     <div class="boxdown">
+        <!-- <div class="pinyin"></div> -->
         <div>
             <input type="radio" onchange="chooseCharfile()" id="trad" name='character' value="trad" checked>
             <label for="trad">Znaki tradycyjne</label>

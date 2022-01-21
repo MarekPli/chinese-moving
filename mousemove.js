@@ -1,6 +1,6 @@
 let pressed = false;
 let keysRectans = new Object()
-let tabRectans = []
+let tabRectans = new Array()
 let spacePosX = 100
 let cssTop = '200px'
 let xPos = spacePosX
@@ -9,14 +9,18 @@ let fileText = ''
 let checkedOrdered = false
 let rectan = document.getElementsByClassName('rectan')[0]
 let lines = document.getElementsByClassName('lines')[0]
+lines.innerHTML = 'Wybierz linię tekstu'
 let commonf = document.querySelector(['input[id="commonf"]']).checked
 let blackshadow = document.querySelector(['input[id="blackshadow"]']).checked
 let topequal = document.querySelector(['input[id="topequal"]']).checked
 let mixing = document.querySelector(['input[id="mixing"]']).checked
 let currentLine = document.querySelector(['input[name="dronerange"]']).value
-lines.innerHTML = 'Wybierz linię tekstu'
-
-
+let pinyinChecked = document.querySelector(['input[name="pinyin"]']).checked
+let translateChecked = document.querySelector(['input[name="translate"]']).checked
+const arrPinyin = pinyinStr.split('\n')
+const arrTranslate = translateStr.split('\n')
+let currentPinyin = new Array(8)
+let currentTranslate = new Array(8)
 document.querySelector('#reading_file').addEventListener('click', function (e) {
     // e.target.innerHTML = "Plik wybrany"
     let file = document.getElementById('file').files[0]
@@ -101,6 +105,20 @@ chooseLine = () => {
     }
 }
 
+updatePinyin = () => {
+    let arr = arrPinyin[currentLine].split(" ")
+    arr.forEach((element, idx) => {
+        currentPinyin[idx] = element
+    })
+}
+
+updateTranslate = () => {
+    let arr = arrTranslate[currentLine].split("|")
+    arr.forEach((element, idx) => {
+        currentTranslate[idx] = element
+    })
+}
+
 chooseCharfile = () => {
     let charType = document.querySelector(['input[name="character"]:checked']).value
     switch (charType) {
@@ -121,8 +139,11 @@ chooseCharfile = () => {
 printCharacters = (random = true) => {
     // line = Math.floor(Math.random() * 125)
     // let plus = 10 * line
-    if (random)
+    if (random) {
         chooseLine()
+        updatePinyin()
+        updateTranslate()
+    }
     let modulus = 9
     if (printText.length == 1250)
         modulus = 10;
@@ -131,8 +152,14 @@ printCharacters = (random = true) => {
     xPos = spacePosX
     for (let i = plus; i < tabRectans.length + plus; i++) {
         let j = i - plus
-        if (printText) // może być undefined przed wczytaniem pliku
+        if (printText) { // może być undefined przed wczytaniem pliku
             tabRectans[j].innerHTML = printText[i]
+            if (pinyinChecked)
+                tabRectans[j].innerHTML += `<div class="pinyin"> ${currentPinyin[j]} </div>`
+            if (translateChecked)
+                tabRectans[j].innerHTML += `<div class="translate"> ${currentTranslate[j]} </div>`
+        }
+
         if (!random)
             continue
         randomColor(tabRectans[j])
@@ -142,6 +169,11 @@ printCharacters = (random = true) => {
     }
     if (!random)
         return
+    // document.querySelector('.pinyin').innerHTML = arrPinyin[currentLine]
+    // tabColor.forEach((_, idx, tabColor) => {
+    //     tabColor[idx] = Math.floor(Math.random() * 255)
+    // });
+
     let line = (currentLine + 1) * 2 - 1
     lines.innerHTML = "Wypisano linie: " + line + ' oraz ' + (line + 1) + '.'
     if (mixing)
@@ -239,6 +271,11 @@ addToTable = () => {
     elem.addEventListener('mousedown', e => {
         if (e.button == 0) {
             pressed = e.target.id
+            tabRectans.forEach(el => {
+                if (el.style.zIndex >= parseInt(7))
+                    el.style.zIndex = "6"
+            })
+            e.target.style.zIndex = "7"
         } else if (e.button == 2) { // 'contextmenu'
             randomColor(e.target)
         }
@@ -290,6 +327,15 @@ modifyFontShadow = () => {
     blackshadow = document.querySelector(['input[id="blackshadow"]']).checked
     for (let i = 0; i < tabRectans.length; i++)
         setFontShadow(tabRectans[i])
+}
+
+modifyPinyin = () => {
+    pinyinChecked = document.querySelector(['input[name="pinyin"]']).checked
+    printCharacters(false)
+}
+modifyTranslate = () => {
+    translateChecked = document.querySelector(['input[name="translate"]']).checked
+    printCharacters(false)
 }
 
 myExecute = () => {
